@@ -5,16 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quanto costa il mio miglietto del treno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body>
-    <div>
-        <input type="number" name="km" placeholder="Km che vuoi percorrere">
-        <input type="number" name="età" placeholder="età">
-        <button>Calcola</button>
+<body class="bg-info">
+    <div class="d-flex justify-content-center align-items-center box-compra bg-primary" style="height: 100vh;">
+        <button class="btn btn-success w-25 h-25 fs-2 compra">Premi qui per acquistare il tuo biglietto del treno</button>
     </div>
-
-    <h1>Costo biglietto:</h1>
-    <div id="biglietto"></div>
+    <div class="content d-none">
+        <div class="container pt-4">
+            <div>
+                <span class="pe-5">Quanti km vuoi percorrere col treno?</span>
+                <span class="ps-5">Quanti anni hai?</span>
+            </div>
+            <input class="form-control w-25 d-inline bg-info-subtle me-4" type="number" name="km" placeholder="Km che vuoi percorrere" aria-label="default input example" min="1" step="10">
+            <input class="form-control w-25 d-inline bg-info-subtle me-4" type="number" name="età" placeholder="età" aria-label="default input example" min="1" max="100">
+            <button class="btn btn-primary calcola">Calcola</button>
+            <button class="btn btn-danger reset">Cancella</button>
+        </div>
+    
+        <div class="container">
+            <div id="biglietto" class="p-2"></div>
+        </div>
+    </div>
     
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
